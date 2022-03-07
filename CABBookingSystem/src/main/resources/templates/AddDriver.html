@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+       
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    </head>
+    <body>
+       
+     <body>
+    <div class="container my-5">
+        <h3> Add Driver</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                     <form action="#" th:action="@{/driver/drivers}" th:object="${driver}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">licenceNo</label> <input type="text" th:field="*{licenceNo}" class="form-control" id="licenceNoe" placeholder="licenceNo"> <span th:if="${#fields.hasErrors('licenceNo')}" th:errors="*{licenceNo}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">rating</label> <input type="text" th:field="*{rating}" class="form-control" id="rating" placeholder="rating"> <span th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value="Add Driver">
+								<input type="reset" class="btn btn-primary" value="Reset">
+                            </div>
+
+                            <div class="form-group col-md-8"></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

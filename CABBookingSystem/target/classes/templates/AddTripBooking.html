@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+       
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    </head>
+    <body>
+       
+
+    <div class="container my-5">
+        <h3> Add TripBooking</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                 <form action="#" th:action="@{/tripBooking/cretatetrip}" th:object="${tripBooking}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">customerId</label> <input type="text" th:field="*{customerId}" class="form-control" id="customerId" placeholder="carType"> <span th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">fromLocation</label> <input type="text" th:field="*{fromLocation}" class="form-control" id="fromLocation" placeholder="fromLocation"> <span th:if="${#fields.hasErrors('fromLocation')}" th:errors="*{VperKmRate}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">toLocation</label> <input type="text" th:field="*{toLocation}" class="form-control" id="toLocation" placeholder="toLocation"> <span th:if="${#fields.hasErrors('toLocation')}" th:errors="*{toLocation}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">fromDateTime</label> <input type="date" th:field="*{fromDateTime}" class="form-control" id="fromDateTime" placeholder="fromDateTime"> <span th:if="${#fields.hasErrors('fromDateTime')}" th:errors="*{fromDateTime}" class="text-danger"></span>
+<!--                             <input type="date" class="form-control" name="fromDateTime" th:field="*{fromDateTime}" /> -->
+                            </div>
+                            
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">toDateTime</label> <input type="date" th:field="*{toDateTime}" class="form-control" id="toDateTime" placeholder="toDateTime"> <span th:if="${#fields.hasErrors('toDateTime')}" th:errors="*{toDateTime}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">status</label> <input type="text" th:field="*{status}" class="form-control" id="status" placeholder="status"> <span th:if="${#fields.hasErrors('status')}" th:errors="*{status}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">distanceInKm</label> <input type="text" th:field="*{distanceInKm}" class="form-control" id="distanceInKm" placeholder="distanceInKm"> <span th:if="${#fields.hasErrors('distanceInKm')}" th:errors="*{distanceInKm}" class="text-danger"></span>
+                            </div>
+                              <div class="form-group col-md-8">
+                                <label for="bill" class="col-form-label">bill</label> <input type="text" th:field="*{bill}" class="form-control" id="bill" placeholder="bill"> <span th:if="${#fields.hasErrors('bill')}" th:errors="*{bill}" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value="Add Cab">
+								<input type="reset" class="btn btn-primary" value="Reset">
+                            </div>
+
+                            <div class="form-group col-md-8"></div>
+
+                        </div>
+                    </form>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+                  
